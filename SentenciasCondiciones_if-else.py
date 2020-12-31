@@ -1,4 +1,4 @@
-from math import sqrt #La función sqrt calcula la raiz cuadrada de un número
+from math import sqrt  # La función sqrt calcula la raiz cuadrada de un número
 
 print('Programa para la resolución de la ecuación a x*x +b x + c = 0.')
 
