@@ -1,0 +1,225 @@
+
+#Operadores aritmeticos
+
+Operación Operador           Asociatividad                 Precedencia
+Exponenciación     **        Derecha a izquierda                1
+
+Identidad
+(cambio de signo) +  -                                          2
+
+Multiplicación    *            Por la Izq.                      3
+Division          /            Por la Izq.                      3
+Div. Entera       //            Por la Izq.                     3
+Modulo             %            Por la Izq.                     3
+(o resto de la division)
+
+Suma             +              Por la Izq.                     4
+Resta            -              Por la Izq.                     4
+
+ !=     es distinto de                                          5
+ ==     es igual que                                            5
+ <      es menor que                                            5
+ <=     es mejor o igual que                                    5
+ >      es mayor que                                            5
+ >=     es mayor o igual que                                    5
+ 
+Negacion            not                                         6
+Conjuncion          and                                         7
+Disjuncion          or                                          8
+
+#Los operadores binarios operan sobre dos operando (suma, resta, multiplicacion, division, exponenciacion)
+
+#La division entera (simbolo //) devuelve un valor entero como resultado
+
+#El modulo (simbolo %) devuelve el sobrante de una division
+
+-- TIPOS DE DATOS --
+*Numeros de coma flotante,  mantista, exponente y signo.
+
+*los numeros enteros ocupan menos memoria y las operaciones son mas rapidas.
+
+BOLEANOS Y SUS OPERADORES logicos
+eL tipo de dato boleano se escribe con la primer letra MAYUSCULA
+los operadores logicos son and , or , not
+
+operador and da solo y unicamente True cuando sus dos de sus operadores son True y cuando son distintos da como resultado False
+Operador or da como True si cualquiera de sus operandos es True, y solo False solo cuando ambos son False
+Operador not es UNARIO y porporciona lo contrario a lo que se le proporcione, si se le da True proporciona False y viceversa
+
+-- Operadores de comparacion --
+operador comparación
+ !=     es distinto de
+ ==     es igual que
+ <      es menor que
+ <=     es mejor o igual que
+ >      es mayor que
+ >=     es mayor o igual que
+
+
+-- Variables --
+NO ASIGNAR VARIABLES CON MAYUSCULAS por que los tomara como constantes
+NO USAR ESPACIOS EN VARIABLES
+NO USAR CARACTERES ESPECIALES
+
+    *a la hora de compilar puede haber problemas
+    
+-- Comentarios en python --
+Usar # para comentar una linea
+Usar tres comillas para comentar un bloque
+
+#Lo toma del tipo cadena por las comillas
+nada = ""
+#Lo toma como none
+nada2 = None
+#Variable de tipo INT (entero)
+numero = 12
+flotante = 3.2
+#Cuando es de tipo boleano se debe escribir con la primer letra en MAYUSCULAS
+boleano = True #False
+#Variable de tipo rango
+rango = range(9)
+lista = []
+diccionario = {}
+tupla = ()
+
+
+#Ver el tipo variable
+print (type(nada))
+print (type(nada2))
+print (type(numero))
+print (type(flotante))
+print (type(boleano))
+print (type(rango))
+print (type(lista))
+print (type(tupla))
+
+#Asignar una variable dentro de otra, debemos tener CUIDADO con el tipo de dato
+
+CADENAS
+#Una cadena no es un identificador
+Una cadena va entre comilla doble o sencilla "cadena" 'cadena'
+
+CONCATENAR CADENAS
+>>> "pablo" + 'ramires'
+pabloramires
+REPETIDOR DE CADENAS
+Utilizamos el simbolo * que tambien lo usamos para multiplicar
+>>> 'Hola' * 5
+'HolaHolaHolaHolaHola'
+
+ALGUNAS FUNCIONES
+funcion abs, por ejemplo, calcula el valos absoluto de un numero
+El numero sobre el que se aplica la funcion se llama argumento y va entre prentesis
+>>> abs(0)
+0
+
+float = convierte un valor dado en flotante y puede recibir del tipo cadena representa un valor flotante. Si no devuelve un error.
+
+int = conversion a entero. si recibe un numero flotante como argumento, devuelve el entero que se obtiene eliminando la parte fraccionaria.
+>>> int(2.1)
+2
+
+La funcion int acepta como argumento una cadena:
+>>> int('2')
+2
+
+La funcion bin: representacion en binario. convierte un numero entero en una cadena con el numero expresado en base 2.
+>>> bin(3)
+'Ob11'
+>>> bin(10)
+Ob1010
+
+La funcion oct: representacion en octal.convierte un numero entero en una cadena con el numero expresado en base 8.
+>>> oct(3)
+'Oc3'
+>>> oct(10)
+'Oc12'
+
+La funcion hex: representacion en hexadecimal. convierte un numero en una cadena con el numero expresado en base 16.
+>>> hex(3)
+'0x3'
+>>> hex(10)
+'0xa'
+
+La funcion round: redondeo. puede usarse con uno o dos argumentos. si se usa con un solo argumento, redondea el número al entero más próximo
+>>> round(2.1)
+2
+>>> round(2.9)
+3
+>>> round(-2.9)
+-3
+>>> round(2)
+2
+
+Si round recibe dos argumentos, estos deben ir separados por una coma y el sgundo indica el número de decimales que deseamos conservar tras el redondeo.
+>>> round(2.1451, 2)
+2.15
+>>> round(2.1451, 3)
+2.145
+>>> round(2.1451, 1)
+2.1
+>>> round(2.1451, 0)
+2.0
+
+Función ord: Nos sirve para conocer el valor numérico que corresponde a un carácter.
+>>> ord(a)
+97
+
+La función chr: hace lo contrario a ord. Nos devuelve un carácter, dado su valor numérico.
+>>> chr(97)
+'a'
+
+IMPORTAR MODULOS
+#Para importar un modulo lo hacemos de la siguiente manera, en este caso importamos el modulo math para hacer operaciones y calculos.
+#Importamos la función sin (seno)
+>>> from math import sin
+
+#Si queremos importar mas de una función las agregamos separandolas por comas
+>>> from math import sin, cos
+
+#Para importar todas las funciones contenidas en un módulo utilizamos el comodin asterisco *
+>>> from math import *
+
+OTRA FORMA DE UTILIZAR LOS MODULOS Y EVITAR ERRORES
+#Para evitar errores al agregar todas las funciones y alguna pueda coincidir con una de nuestras variables. Se puede utilizar otra manera al llamar las funciones que necesitemos.
+>>> import math
+Hacemos que todas las funciones del módulo math esten disponibles
+y despues utilizarmos el nombre del módulo y un punto como prefijo:
+>>> import math
+>>> math.sin(0)
+0.0
+
+METODOS , son funciones especiales.
+#Se invocan de la siguiente manera:
+argumento1.metodo(argumento2,argumento3...)
+
+EJEMPLO:
+convertir una cadena que contiene letras MAYUSCULAS
+>>> cadena = 'Un EJEMPLO de Cadena'
+>>> cadena.lower()
+'un ejemplo de cadena'
+
+Pasar una cadena de minusculas a mayúsculas
+>>> 'Otro ejemplo'.upper()
+'OTRO EJEMPLO'
+
+MÉTODO format
+#Dar formato a una cadena
+
+Interpolar valores
+>>> 'El número {0} ha sido interpolado.'.format(1.23)
+'El número 1.23 ha sido interpolado'
+
+NOTA
+#En python el número inicial es el CERO
+
+#Imprimir variables en la funcion print, van dentro parentesis y entre comas.
+>>> print('Voluen:', VOLUMEN, 'metros cúbicos.')
+
+
+#Comandos github
+git add .
+git commint -m "MENSAJE opcional para la actualizacón o contro de versiones"
+git push
+
+
